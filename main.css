@@ -1,0 +1,37 @@
+body{
+   font-family: 'Raleway', sans-serif;
+}
+
+header{
+   text-align: center;
+   margin: 70px 15% 0 15%;
+}
+
+.inputs{
+   margin: 50px 35% 10px 35%;
+}
+
+.container{
+   margin: 20px 0;
+}
+
+.userInput {
+   width: 140px;
+}
+
+.answer{
+   text-align: center;
+   padding: 10px 0;
+}
+
+#input{
+   float: right;
+}
+
+.pagesPerDay{
+   font-size: 1.2em;
+   border: 1px solid #DBDBDB;
+   border-radius: 3px;
+   padding: 0px 3px;
+   background-color: aquamarine;
+}
