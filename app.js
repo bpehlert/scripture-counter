@@ -6,7 +6,7 @@ const daysOfReading = document.querySelector(".daysOfReading");
 const today = new Date();
 const end = new Date(today.getFullYear(), 11, 31);
 const oneDay = 1000 * 60 * 60 * 24;
-const days = Math.ceil((end.getTime() - today.getTime()) / oneDay) + 1;
+const daysLeft = Math.ceil((end.getTime() - today.getTime()) / oneDay) + 1;
 
 const oT = 1184;
 const nT = 1590;
@@ -38,9 +38,10 @@ function handleChange() {
 
   const currentPage = userInput.value;
   const pagesLeft = totalPages - currentPage;
-  const pagesToRead = userInput.value ? (totalPages - currentPage) / days : 0;
-  const precision = pagesToRead === 0 ? 1 : 2;
-  pagesPerDay.textContent = pagesToRead.toPrecision(precision);
+  const pagesToRead = userInput.value
+    ? (totalPages - currentPage) / daysLeft
+    : 0;
+  pagesPerDay.textContent = pagesToRead.toPrecision(2);
   daysOfReading.textContent = Math.round(pagesLeft / 7);
 }
 
