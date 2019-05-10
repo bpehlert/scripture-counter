@@ -8,6 +8,7 @@ const end = new Date(today.getFullYear(), 11, 31);
 const oneDay = 1000 * 60 * 60 * 24;
 const daysLeft = Math.ceil((end.getTime() - today.getTime()) / oneDay) + 1;
 
+// Number of pages for each book
 const oT = 1184;
 const nT = 1590;
 const bM = 531;
